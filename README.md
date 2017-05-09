@@ -46,6 +46,12 @@ Im Rahmen des von Herrn Prof. Thomas Ihme betreuten Kurs "Robotik" entstand die 
     * Ermöglicht Austarrieren der Drohne
 
 ### Software
+
+## Entwicklung
+Für die Entwicklung der Software wird diese Github-Repository verwendet. Jedes Software-System erhält seinen eigenen Branch für die Entwicklung, am Ende des Projektes werden diese gemerged.
+Vorhandene Branches:
+* [HoloLens-Template](https://github.com/mre-lecture/Game-of-Drones/tree/hololens-template) - Bootstrap-Branch zum schnellen Erstellen neuer HoloLens-Anwendungen
+
 [tbd]
 
 ### Probleme
