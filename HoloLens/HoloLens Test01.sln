@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloLens Test01", "Assembly-CSharp.csproj", "{ED7D184E-32D5-8215-2497-1906835A2E46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloLens Test01", "Assembly-CSharp-Editor.csproj", "{6D1EA29B-93E9-73CD-C9B9-5B6D31EAA942}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED7D184E-32D5-8215-2497-1906835A2E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED7D184E-32D5-8215-2497-1906835A2E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED7D184E-32D5-8215-2497-1906835A2E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7D184E-32D5-8215-2497-1906835A2E46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D1EA29B-93E9-73CD-C9B9-5B6D31EAA942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D1EA29B-93E9-73CD-C9B9-5B6D31EAA942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D1EA29B-93E9-73CD-C9B9-5B6D31EAA942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D1EA29B-93E9-73CD-C9B9-5B6D31EAA942}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
