@@ -27,7 +27,7 @@ Im Rahmen des von Herrn Prof. Thomas Ihme betreuten Kurs "Robotik" entstand die 
 [tbd]
 
 ### Hardware
-* HoloLens
+* HoloLens ("_Facehugger_")
   * Erhält Input von User und Server
   * Sendet Befehle an Server
 * Server (_"Sherman"_)
