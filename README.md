@@ -36,7 +36,7 @@ Im Rahmen des von Herrn Prof. Thomas Ihme betreuten Kurs "Robotik" entstand die 
 * Drohne
   * Intel RealSense [R200](https://ark.intel.com/de/products/92256/Intel-RealSense-Camera-R200)
     * Nimmt Kamerabild auf und extrahiert Tiefeninformationen
-  * Intel SoC ["AAEON UP"](https://software.intel.com/en-us/realsense/robotic-development-kit) (_"Arado"_)
+  * Intel SoC ["AAEON UP"](https://software.intel.com/en-us/realsense/robotic-development-kit) (_"HAL9000"_)
     * Leitet Daten der R200 an Server weiter
     * _(Momentan auf dem Server virtualisiert da nicht verfügbar)_
   * Raspberry Pi 3 (_"Skymaster"_)
