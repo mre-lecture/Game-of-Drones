@@ -21,10 +21,10 @@ Der Kurs "Mixed Reality" wurde in Zusammenarbeit mit der empea AR VR GmbH erstma
 Im Rahmen des von Herrn Prof. Thomas Ihme betreuten Kurs "Robotik" entstand die Idee, einen Roboter zu entwickeln. **[TODO]**
 
 ## Szenario
-[tbd]
+[cont.]
 
 ## Umsetzung
-[tbd]
+[cont.]
 
 ### Hardware
 * HoloLens
@@ -52,12 +52,14 @@ Für die Entwicklung der Software wird diese Github-Repository verwendet. Jedes 
 Vorhandene Branches:
 * [HoloLens-Template](https://github.com/mre-lecture/Game-of-Drones/tree/hololens-template) - Bootstrap-Branch zum schnellen Erstellen neuer HoloLens-Anwendungen
 
-[tbd]
+[cont.]
 
 ### Probleme
 * MRE
   * IDE: Gleichzeitige Installation von Visual Studio 2015, Visual Studio 2017 und Unity fürhte dazu, dass sich keine Solutions mehr laden ließen
   * HoloLens-Emulator: Installation konnte installiertes Visual Studio 2015 nicht finden, brach ab
+  * Git: Fehlerhafte .gitignore führte dazu, dass alle *.meta-Dateien des Unity-Projekts ignoriert wurden und von der Repository gepullte Projekte nicht korrekt funktionierten
+  * Github: Langsame Downloadraten (10kbit/s) von Github führten zu stundenlangen clone- und push-Vorgängen
 * ROB
   * Virtualisierung des Intel SoC
       * qemu stürzte ununterbrochen ab
