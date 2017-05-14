@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RotationScript : MonoBehaviour {
 
-    public Vector3 RotationVector;
+    public Vector3 Rotation;
 	
 	// Update is called once per frame
 	void Update () {
-        this.transform.Rotate(RotationVector.x * Time.deltaTime, RotationVector.y * Time.deltaTime, RotationVector.z * Time.deltaTime, Space.Self);
+        this.transform.Rotate(Rotation.x * Time.deltaTime, Rotation.y * Time.deltaTime, Rotation.z * Time.deltaTime, Space.Self);	
 	}
 }

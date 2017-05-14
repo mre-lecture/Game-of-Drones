@@ -1,9 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloLens", "HoloLens.csproj", "{2BCECF5C-8B19-D3DB-E144-A19382A694DC}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloLens", "Assembly-CSharp.csproj", "{DB97A1B6-1439-D182-D3D9-71F7DACA766A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloLens.Editor", "HoloLens.Editor.csproj", "{D7970015-796C-23D7-A622-9590452FCB4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloLens", "Assembly-CSharp-Editor.csproj", "{B48FD014-E731-E4F0-0456-9559D529422D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,16 +11,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2BCECF5C-8B19-D3DB-E144-A19382A694DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BCECF5C-8B19-D3DB-E144-A19382A694DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BCECF5C-8B19-D3DB-E144-A19382A694DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BCECF5C-8B19-D3DB-E144-A19382A694DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D7970015-796C-23D7-A622-9590452FCB4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7970015-796C-23D7-A622-9590452FCB4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7970015-796C-23D7-A622-9590452FCB4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7970015-796C-23D7-A622-9590452FCB4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB97A1B6-1439-D182-D3D9-71F7DACA766A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB97A1B6-1439-D182-D3D9-71F7DACA766A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB97A1B6-1439-D182-D3D9-71F7DACA766A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB97A1B6-1439-D182-D3D9-71F7DACA766A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B48FD014-E731-E4F0-0456-9559D529422D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B48FD014-E731-E4F0-0456-9559D529422D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B48FD014-E731-E4F0-0456-9559D529422D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B48FD014-E731-E4F0-0456-9559D529422D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
