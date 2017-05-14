@@ -1,2 +1,2 @@
-# Game-of-Drones/hololens-template
-Dieser Branch stellt ein fertig konfiguriertes Unity-Projekt für das schnelle Prototyping mit HoloLens bereit.
+# Game-of-Drones/hololens-deployment
+Dieser Branch beinhaltet aktuelle Projekte, die auf eine HoloLens hochgeladen und getestet werden.
