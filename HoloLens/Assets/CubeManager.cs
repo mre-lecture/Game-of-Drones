@@ -5,7 +5,7 @@ using UnityEngine.VR.WSA.Input;
 
 public class CubeManager : MonoBehaviour {
 
-    public GameObject blueCubePrefab;
+    public GameObject greenCubePrefab;
 
     GestureRecognizer recognizer;
 
@@ -23,7 +23,7 @@ public class CubeManager : MonoBehaviour {
         var origin = headRay.origin;
         var position = origin + direction * 2.0f;
 
-        Instantiate(blueCubePrefab, position, Quaternion.identity);
+        Instantiate(greenCubePrefab, position, Quaternion.identity);
     }
 
     // Update is called once per frame
