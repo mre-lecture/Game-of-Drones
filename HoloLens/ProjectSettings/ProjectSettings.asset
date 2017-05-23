@@ -515,11 +515,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: AirTapMenu
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 00d22714b6f2d301
   metroApplicationDescription: AirTapMenu
   wsaImages: {}
   metroTileShortName: 
