@@ -54,18 +54,20 @@ Vorhandene Branches:
 
 [cont.]
 
-### Probleme
+### Probleme [chronologisch]
 * MRE
   * IDE: Gleichzeitige Installation von Visual Studio 2015, Visual Studio 2017 und Unity fürhte dazu, dass sich keine Solutions mehr laden ließen
   * HoloLens-Emulator: Installation konnte installiertes Visual Studio 2015 nicht finden, brach ab
   * Git: Fehlerhafte .gitignore führte dazu, dass alle *.meta-Dateien des Unity-Projekts ignoriert wurden und von der Repository gepullte Projekte nicht korrekt funktionierten
   * Github: Langsame Downloadraten (10kbit/s) von Github führten zu stundenlangen clone- und push-Vorgängen
+  * HoloLens-Emulator: Nur ein PC im Team hat ausreichend RAM, um den Emulator auszuführen
 * ROB
   * Virtualisierung des Intel SoC
       * qemu stürzte ununterbrochen ab
       * qemu-kvm unterstützte keine 64bit-Architektur
       * VirtualBox wurde genutzt, ließ sich zunächst nicht bei Systemboot [des Servers] starten
       * Die Leistung der VM auf die des SoC zu drosseln gelang nur mäßig, mit Herausforderungen bei der Integration des SoC ist zu rechnen
+      * uvcvideo-Treiber verhalten sich falsch oder stürzen ab
   * 3D-Kameras
     * R200
       * Treiber mussten kompiliert und Secure Boot dafür deaktiviert werden
@@ -75,5 +77,8 @@ Vorhandene Branches:
       * Zu groß, schwer und zu geringe "Sichtweite" für Einsatz auf der Drohne
     * Microsoft Kinect
       * Zu groß, schwer und zu großer Stromverbrauch für Einsatz auf der Drohne
-
+   * Drohne
+      * Motor durchgebrannt bei Konfiguration mit LibrePilot
+      * Rotor abgerissen bei erstem Start
+      * Motor blockiert bei unsanfter Landung, Motor und ESC in Folge durchgebrannt
 _And there are more yet to come..._
