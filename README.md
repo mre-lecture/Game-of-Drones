@@ -1,2 +1,2 @@
-# Game-of-Drones/skymaster
-Dieser Branch beinhaltet den aktuellen Code der Skymaster-Komponenete.
+# Game-of-Drones/hal9000
+Dieser Branch beinhaltet den aktuellen Code der HAL9000-Komponenete.
