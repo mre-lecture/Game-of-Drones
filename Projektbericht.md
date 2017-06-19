@@ -39,8 +39,8 @@ Im Rahmen des von Herrn Prof. Thomas Ihme betreuten Kurs "Robotik" entstand die 
   * Intel SoC ["AAEON UP"](https://software.intel.com/en-us/realsense/robotic-development-kit) (_"HAL9000"_)
     * Leitet Daten der R200 an Server weiter
     * _(Momentan auf dem Server virtualisiert da nicht verfügbar)_
-  * Raspberry Pi 3 (_"Skymaster"_)
-    * Leitet Steuerbefehle vom Server an CC3D weiter
+  * Arduino Nano (_"Skymaster"_)
+    * Leitet Steuerbefehle vom Server an CC3D weiter; Implementiert Regelungstechnik
   * CC3D
     * Steuert Motoren an
     * Ermöglicht Austarrieren der Drohne
@@ -51,7 +51,8 @@ Im Rahmen des von Herrn Prof. Thomas Ihme betreuten Kurs "Robotik" entstand die 
 Für die Entwicklung der Software wird diese Github-Repository verwendet. Jedes Software-System erhält seinen eigenen Branch für die Entwicklung, am Ende des Projektes werden diese gemerged.
 Vorhandene Branches:
 * [HoloLens-Template](https://github.com/mre-lecture/Game-of-Drones/tree/hololens-template) - Bootstrap-Branch zum schnellen Erstellen neuer HoloLens-Anwendungen
-
+* [HoloLens-Deployment](https://github.com/mre-lecture/Game-of-Drones/tree/hololens-deployment) - Branch mit aktuellem Code zum Deployen
+* [Skymaster](https://github.com/mre-lecture/Game-of-Drones/tree/skymaster) - Branch mit aktuellem Code der Skymaster-Komponente
 [cont.]
 
 ### Probleme [chronologisch]
@@ -61,6 +62,8 @@ Vorhandene Branches:
   * Git: Fehlerhafte .gitignore führte dazu, dass alle *.meta-Dateien des Unity-Projekts ignoriert wurden und von der Repository gepullte Projekte nicht korrekt funktionierten
   * Github: Langsame Downloadraten (10kbit/s) von Github führten zu stundenlangen clone- und push-Vorgängen
   * HoloLens-Emulator: Nur ein PC im Team hat ausreichend RAM, um den Emulator auszuführen
+  * Vuforia: Example-Projekte wurden teilweise geupdated, neues Einlesen erforderlich
+  * Ziele neu definiert: Wechseln von augmentierung erkannter Overflächen zu Augmentierung des sensorischen Inputs und einfache Steuerung
 * ROB
   * Virtualisierung des Intel SoC
       * qemu stürzte ununterbrochen ab
@@ -71,7 +74,7 @@ Vorhandene Branches:
   * 3D-Kameras
     * R200
       * Treiber mussten kompiliert und Secure Boot dafür deaktiviert werden
-      * Benötigt USB 3; kann nicht mit Raspberry Pis zu betrieben werden
+      * Benötigt USB 3; kann nicht mit Raspberry Pis betrieben werden
       * Erkennt reflektierende Flächen nur schlecht
     * SR300
       * Zu groß, schwer und zu geringe "Sichtweite" für Einsatz auf der Drohne
@@ -81,4 +84,7 @@ Vorhandene Branches:
       * Motor durchgebrannt bei Konfiguration mit LibrePilot
       * Rotor abgerissen bei erstem Start
       * Motor blockiert bei unsanfter Landung, Motor und ESC in Folge durchgebrannt
+   * Video-Streaming: `rc_buffer_underflow` - Zu viele Daten, Intel SoC kann nicht richtig streamen
+   * Arduino Nano:
+      * Einlesen von PWM (2x), Ultraschall (2x) und Ausgabe von Puls (1x) resultieren in potentiell viel zu geringem Puls an den CC3D -> *Lösung:* Interrupts!
 _And there are more yet to come..._
