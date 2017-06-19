@@ -8,3 +8,4 @@ Hier entsteht das MRE-/ROB-Verbundprojekt _"Game of Drones"_!
     * **master** - Hauptbranch, in den alle Branches einzelner Softwarekomponenten zu Projektende gemerged werden
     * **hololens-template** - Für schnelles Prototyping mit der HoloLens vorbereitetes Unity-Projekt
     * **hololens-deployment** - Beinhaltet das aktuell zu deployende Unity-prjekt für die HoloLens
+    * **skymaster** - Beinhaltet den aktuellen Code der Skymaster-Komponente
