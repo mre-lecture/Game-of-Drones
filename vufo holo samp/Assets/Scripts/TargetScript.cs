@@ -30,6 +30,8 @@ public class TargetScript : MonoBehaviour, ITrackableEventHandler
                                     TrackableBehaviour.Status previousStatus,
                                     TrackableBehaviour.Status newStatus)
     {
+        UnityEngine.Debug.Log("VM changed from " + previousStatus + " to " + newStatus);
+
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
@@ -53,6 +55,7 @@ public class TargetScript : MonoBehaviour, ITrackableEventHandler
     {
         var counter = drohne.GetComponent<CounterScript>();
         counter.count++;
+        counter.target = this.gameObject;
     }
 
 

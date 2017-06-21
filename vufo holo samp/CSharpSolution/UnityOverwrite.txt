@@ -5,14 +5,14 @@
 # Write a line equal to 'overwrite-all' (without quotes) to overwrite everything (preserved accross builds)
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
-vufo holo samp.sln: 8A5FA8B01313141F47AD88DD17D0E6B3
+vufo holo samp.sln: modified
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 GeneratedProjects\UWP\Assembly-CSharp-firstpass\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 vufo holo samp\App.cs: E2F11FE73D485AF127D4D6AA4FA2F85E
-vufo holo samp\Package.appxmanifest: 0EE0351093C757FA69E379364F6D9445
+vufo holo samp\Package.appxmanifest: B673A0006192F3EAAE65490794833E61
 vufo holo samp\project.json: 1D02BC64BAC0D041019673A1C4C51737
-vufo holo samp\vufo holo samp.csproj: 7659C2A4E5665145AF8DB505B44291E2
-vufo holo samp\vufo holo samp.csproj.user: BEFB8AC4886C4CFDD3C68445D6F19B04
+vufo holo samp\vufo holo samp.csproj: 78D866609FB7B4C131B3DC7E29088C19
+vufo holo samp\vufo holo samp.csproj.user: modified
 vufo holo samp\Assets\SplashScreen.scale-200.png: 60618416282ED104FD1473935716045D
 vufo holo samp\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
 vufo holo samp\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870A9D564953775DE
