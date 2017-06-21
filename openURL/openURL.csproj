@@ -81,8 +81,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ArrowDownScript.cs" />
-    <Compile Include="Assets\ArrowUpScript.cs" />
+    <Compile Include="Assets\ArrowScript.cs" />
     <Compile Include="Assets\CameraScript.cs" />
     <Compile Include="Assets\DroneRotationLeftScript.cs" />
     <Compile Include="Assets\DroneRotationRightScript.cs" />
