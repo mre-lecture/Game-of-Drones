@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="VuMark01" size="1.000000 1.000000" />
+    <ImageTarget name="VuMark02" size="1.000000 1.000000" />
+    <ImageTarget name="VuMark03" size="1.000000 1.000000" />
+    <ImageTarget name="VuMark04" size="1.000000 1.000000" />
+    <ImageTarget name="VuMark05" size="1.000000 1.000000" />
+    <ImageTarget name="VuMark06" size="1.000000 1.000000" />
+  </Tracking>
+</QCARConfig>

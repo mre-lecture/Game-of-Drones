@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "openURL", "openURL.csproj", "{7A193471-DD20-C6E7-10F3-06295B46081B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "openURL.Editor", "openURL.Editor.csproj", "{51424F1A-AD3D-BDC4-0B99-9D2B9D754F73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A193471-DD20-C6E7-10F3-06295B46081B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A193471-DD20-C6E7-10F3-06295B46081B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A193471-DD20-C6E7-10F3-06295B46081B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A193471-DD20-C6E7-10F3-06295B46081B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51424F1A-AD3D-BDC4-0B99-9D2B9D754F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51424F1A-AD3D-BDC4-0B99-9D2B9D754F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51424F1A-AD3D-BDC4-0B99-9D2B9D754F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51424F1A-AD3D-BDC4-0B99-9D2B9D754F73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
