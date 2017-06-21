@@ -1,0 +1,9 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <UnityWSASolutionName>openURL</UnityWSASolutionName>
+        <UnityWSASolutionDir>C:\Users\Mo\Desktop\GameOfDrones\hololens-template\Game-of-Drones\openURL\tst\</UnityWSASolutionDir>
+        <UnityProjectDir>C:\Users\Mo\Desktop\GameOfDrones\hololens-template\Game-of-Drones\openURL\</UnityProjectDir>
+        <UnityWSAPlayerDir>C:\Program Files\Unity\Editor\Data\PlaybackEngines\MetroSupport\</UnityWSAPlayerDir>
+        <UnityWSAToolsDir>$(UnityWSASolutionDir)Unity\Tools\</UnityWSAToolsDir>
+    </PropertyGroup>
+</Project>
