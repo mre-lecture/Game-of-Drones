@@ -1,8 +1,8 @@
 #ifndef __SERIALCOMMUNICATION__
 #define __SERIALCOMMUNICATION__
 
-#include <cstring>
-#include <cstdlib>
+//#include <string.h>
+//#include <cstdlib>
 
 namespace Skymaster {
   /*
@@ -34,6 +34,8 @@ namespace Skymaster {
     void ClearHeightValue();
     void ClearYawValue();
   private:
+    ProtocolResult ProcessBuffer();
+    
     float m_HeightValue;
     float m_YawValue;
     char m_Buffer[32] = { 0 };
@@ -41,12 +43,12 @@ namespace Skymaster {
   };
 
   SerialCommunication::SerialCommunication(uint32_t p_BaudRate)
-    : m_HeightValue(0), m_YawValue(0), m_BufferIndex(0) {
-    Serial.Begin(p_BaudRate);
+    : m_HeightValue(100), m_YawValue(0), m_BufferIndex(0) {
+    Serial.begin(p_BaudRate);
   }
 
   float SerialCommunication::GetLatestHeightValue() {
-    return this>m_HeightValue;
+    return this->m_HeightValue;
   }
 
   float SerialCommunication::GetLatestYawValue() {
@@ -108,17 +110,25 @@ namespace Skymaster {
         m_BufferIndex = 0;
 
       char c = (char)Serial.read();
-      if (c == '\n') {
+      if (c == '.') {
         //Terminator: Process buffer
         m_Buffer[m_BufferIndex++] = '\0';
 
-        this->ProcessBuffer();
+        Serial.print("SerialInput: \"");
+        Serial.print(m_Buffer);
+        Serial.print("\"");
+
+        ProtocolResult res = this->ProcessBuffer();
 
         m_BufferIndex = 0;
+
+        Serial.print("Serial: ");
+        Serial.println((int)res);
       } else {
         m_Buffer[m_BufferIndex++] = c;
       }
     }
+    Serial.println(m_Buffer);
   }
 }
 
