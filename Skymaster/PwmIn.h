@@ -6,7 +6,7 @@
 namespace Skymaster {
   class PwmIn : public PwmBase {
   public:
-    PwmIn(uint8_t p_Pin) : PwmBase(p_Pin) { }
+    PwmIn(uint8_t p_Pin);
 
     void Update();
     bool HasChanged() {
@@ -15,6 +15,10 @@ namespace Skymaster {
   private:
     uint16_t m_LastValue;
   };
+
+  PwmIn::PwmIn(uint8_t p_Pin) : PwmBase(p_Pin) { 
+    pinMode(p_Pin, INPUT);
+  }
 
   void PwmIn::Update() {
     m_LastValue = m_Value;

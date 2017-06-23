@@ -1,19 +1,17 @@
 #ifndef __SERIALCOMMUNICATION__
 #define __SERIALCOMMUNICATION__
 
-//#include <string.h>
-//#include <cstdlib>
+#include "Debug.h"
 
 namespace Skymaster {
-  /*
-  SerialCommunication
-  The idea is to implement a simple text-based protocol to avoid any conversion problems:
-  <command>'='<value>'\n'
-  e.g. "H=100\n", "Y=-10\n"
-  Valid values for <command>: H (height), Y (yaw)
-  Valid values for <value>: Any floating-point number (max 6 digits of precision)
-  Messages may not exceed 32 bytes of data.
-  */
+  /* SerialCommunication
+   * The idea is to implement a simple text-based protocol to avoid any conversion problems:
+   * <command>'='<value>'.
+   * e.g. "H=100.", "Y=-10."
+   * Valid values for <command>: H (height), Y (yaw)
+   * Valid values for <value>: Any floating-point number (max 6 digits of precision)
+   * Messages may not exceed 32 bytes of data.
+   */
 
   enum class ProtocolResult : uint8_t {
     SUCCESS = 0,
@@ -114,16 +112,16 @@ namespace Skymaster {
         //Terminator: Process buffer
         m_Buffer[m_BufferIndex++] = '\0';
 
-        Serial.print("SerialInput: \"");
-        Serial.print(m_Buffer);
-        Serial.print("\"");
+        DebugPrint("SerialInput: \"");
+        DebugPrint(m_Buffer);
+        DebugPrint("\"");
 
         ProtocolResult res = this->ProcessBuffer();
 
         m_BufferIndex = 0;
 
-        Serial.print("Serial: ");
-        Serial.println((int)res);
+        DebugPrint("Serial: ");
+        DebugPrintLn((int)res);
       } else {
         m_Buffer[m_BufferIndex++] = c;
       }

@@ -1,8 +1,11 @@
 #ifndef __CONTROLSYSTEM__
 #define __CONTROLSYSTEM__
 
+#define __CS_TMPLT_DCL uint16_t T_PULSE_MIN, uint16_t T_PULSE_MAX
+#define __CS_TMPLT_IMPL T_PULSE_MIN, T_PULSE_MAX
+
 namespace Skymaster {
-  template <uint16_t T_PULSE_MIN, uint16_t T_PULSE_MAX>
+  template <__CS_TMPLT_DCL>
   class ControlSystem {
   public:
     ControlSystem(float p_HeightMin, float p_HeightMax)
@@ -13,22 +16,25 @@ namespace Skymaster {
   private:
     uint16_t Calc();
 
+    /* For some reason, float-types can not be used in templates.
+     * - Wasting another 8 bytes of member-variables: They could have been compiled right into the code.
+     * - Grabbing the value by dereferencing the self-reference and adding an offset just makes the code execute slower.
+     * - This probably bothers me too much.
+     */
     float m_HeightMin, m_HeightMax;
     float m_HeightTarget, m_HeightCurrent;
     uint16_t m_CalcCurrent, m_CalcLast;
   };
 
-  template<uint16_t T_PULSE_MIN, uint16_t T_PULSE_MAX>
-  uint16_t ControlSystem<T_PULSE_MIN, T_PULSE_MAX>::GetCurrentValue() {
+  template<__CS_TMPLT_DCL>
+  uint16_t ControlSystem<__CS_TMPLT_IMPL>::GetCurrentValue() {
     return m_CalcCurrent;
   }
 
-  template<uint16_t T_PULSE_MIN, uint16_t T_PULSE_MAX>
-  void ControlSystem<T_PULSE_MIN, T_PULSE_MAX>::Update(float p_HeightTarget, float p_HeightCurrent) {
-    if (p_HeightTarget > m_HeightMax)
-      p_HeightTarget = m_HeightMax;
-    if (p_HeightTarget < m_HeightMin)
-      p_HeightTarget = m_HeightMin;
+  template<__CS_TMPLT_DCL>
+  void ControlSystem<__CS_TMPLT_IMPL>::Update(float p_HeightTarget, float p_HeightCurrent) {
+      
+    p_HeightTarget = max(m_HeightMin, min(m_HeightMax, p_HeightTarget));   
 
     m_HeightTarget = p_HeightTarget;
     m_HeightCurrent = p_HeightCurrent;
@@ -37,8 +43,8 @@ namespace Skymaster {
     m_CalcCurrent = Calc();
   }
 
-  template<uint16_t T_PULSE_MIN, uint16_t T_PULSE_MAX>
-  uint16_t ControlSystem<T_PULSE_MIN, T_PULSE_MAX>::Calc() {
+  template<__CS_TMPLT_DCL>
+  uint16_t ControlSystem<__CS_TMPLT_IMPL>::Calc() {
     float P = T_PULSE_MAX - T_PULSE_MIN;
     float H = (m_HeightTarget - m_HeightMin) * 2.0f;
 
