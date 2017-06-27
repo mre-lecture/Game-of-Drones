@@ -147,6 +147,20 @@ namespace HoloToolkit.Unity.InputModule
             {
                 FocusedObjectChanged(previousFocusObject, HitObject);
             }
+
+            if (previousFocusObject != HitObject)
+            {
+                if (previousFocusObject != null)
+                {
+                    previousFocusObject.SendMessage("OnGazeExit", SendMessageOptions.RequireReceiver);
+                }
+
+                if(FocusedObjectChanged != null)
+                {
+                    HitObject.SendMessage("OnGazeEnter", SendMessageOptions.RequireReceiver);
+                }
+            }
+
         }
 
         /// <summary>
