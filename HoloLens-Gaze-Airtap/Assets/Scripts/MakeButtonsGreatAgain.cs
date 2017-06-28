@@ -5,7 +5,8 @@ using UnityEngine;
 using System;
 using UnityEngine.Networking;
 
-public class MakeButtonsGreatAgain : MonoBehaviour, IFocusable, IInputClickHandler {
+public class MakeButtonsGreatAgain : MonoBehaviour, IFocusable, IInputClickHandler
+{
     private bool focused;
     private UnityWebRequest request;
     private AsyncOperation op;
@@ -60,61 +61,66 @@ public class MakeButtonsGreatAgain : MonoBehaviour, IFocusable, IInputClickHandl
     }
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-        gameObject.GetComponent<Renderer>().material.color = Color.gray;
+        ChangeColor(Color.white);
     }
 
     bool wasDone = false;
     bool isDone = false;
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update()
+    {
         isDone = RequestDone;
 
         if (isDone && !wasDone)
         {
-            gameObject.GetComponent<Renderer>().material.color = Color.green;
             request = null;
+            ChangeColor(Color.white);
         }
 
         wasDone = isDone;
-	}
+    }
+
+    private void ChangeColor(Color c )
+    {
+        var renderers = gameObject.GetComponentsInChildren<Renderer>();
+        foreach (var renderer in renderers)
+            renderer.material.color = c;
+    }
 
     private void OnFocusChanged()
     {
+        UnityEngine.Debug.Log("OnFocusChanged: " + this.gameObject.name);
         if (!RequestBusy)
         {
-            if (this.focused)
-            {
-                gameObject.GetComponent<Renderer>().material.color = Color.yellow;
-            }
-            else
-            {
-                gameObject.GetComponent<Renderer>().material.color = Color.gray;
-            }
+            ChangeColor(focused? Color.green : Color.white);
+        } else
+        {
+            UnityEngine.Debug.Log("OnFocusChanged -> RequestBusy: " + this.gameObject.name);
         }
     }
 
     private void SendRequest()
     {
+        UnityEngine.Debug.Log("SendRequest: " + this.gameObject.name + " to " + TapUrl);
         request = UnityWebRequest.Get(TapUrl);
         op = request.Send();
+
+        ChangeColor(Color.clear);
     }
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
-        if (!focused || eventData.selectedObject != this.gameObject)
-        {
-            UnityEngine.Debug.Log("OnInputClicked: Not me! (" + this.gameObject.name + ")");
-            return;
-        }
+        UnityEngine.Debug.Log("OnInputClicked: " + this.gameObject.name);
 
         //Request null?
         if (RequestBusy)
         {
             UnityEngine.Debug.Log("Couldn't send request: Request already on its way");
-        } else
+        }
+        else
         {
             SendRequest();
         }
