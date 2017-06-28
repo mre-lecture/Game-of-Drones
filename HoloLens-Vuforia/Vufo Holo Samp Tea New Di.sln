@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vufo Holo Samp Tea New Di", "Vufo Holo Samp Tea New Di.csproj", "{B710082C-68D9-C793-9789-EFE4F139E2F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vufo Holo Samp Tea New Di.Editor", "Vufo Holo Samp Tea New Di.Editor.csproj", "{FBCB82F1-9106-BBD3-8AB8-89DE769ED1EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B710082C-68D9-C793-9789-EFE4F139E2F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B710082C-68D9-C793-9789-EFE4F139E2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B710082C-68D9-C793-9789-EFE4F139E2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B710082C-68D9-C793-9789-EFE4F139E2F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBCB82F1-9106-BBD3-8AB8-89DE769ED1EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBCB82F1-9106-BBD3-8AB8-89DE769ED1EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBCB82F1-9106-BBD3-8AB8-89DE769ED1EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBCB82F1-9106-BBD3-8AB8-89DE769ED1EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
